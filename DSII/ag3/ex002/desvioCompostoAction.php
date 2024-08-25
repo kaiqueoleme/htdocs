@@ -12,22 +12,27 @@
 <body>
     <div class="w3-container w3-teal">
         <h1>
-            <?php 
-                $n1 = $_POST['txtN1'];
-                $n2 = $_POST['txtN2'];
-                $n3 = $_POST['txtN3'];
-                $media = ($n1+$n2+$n3)/3;
-                $resultado;
-                echo "".$_POST['txtNome']. "! Sua Média foi ".$media. "!!! <br>";
-                if ($media >= 7)
-                {
-                    $resultado = "Aprovado";
-                }
-                else
-                {
-                    $resultado = "Reprovado";
-                }
-                echo "Resultado: $resultado <br>";
+            <?php
+            $n1 = $_POST['txtN1'];
+            $n2 = $_POST['txtN2'];
+            $n3 = $_POST['txtN3'];
+            $media = ($n1 + $n2 + $n3) / 3;
+            $resultado;
+            echo "" . $_POST['txtNome'] . "! Sua Média foi " . $media . "!!! <br>";
+
+            $resultado = $media >= 7 ? "Aprovado" : "Reprovado";
+            echo "Resultado: $resultado <br>";
+
+            /*if ($media >= 7)
+            {
+                $resultado = "Aprovado";
+            }
+            else
+            {
+                $resultado = "Reprovado";
+            }
+            echo "Resultado: $resultado <br>";
+            */
             ?>
         </h1>
     </div>
