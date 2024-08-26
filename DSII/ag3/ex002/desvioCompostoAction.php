@@ -20,9 +20,18 @@
             $resultado;
             echo "" . $_POST['txtNome'] . "! Sua Média foi " . $media . "!!! <br>";
 
+            if ($media >= 7) {
+                $resultado = "Aprovado";
+            } elseif ($media < 5) {
+                    $resultado = "Reprovado";
+                } else {
+                    $resultado = "Exame";
+                }
+            echo "Resultado: $resultado <br>";
+            /*
             $resultado = $media >= 7 ? "Aprovado" : "Reprovado";
             echo "Resultado: $resultado <br>";
-
+            */
             /*if ($media >= 7)
             {
                 $resultado = "Aprovado";
@@ -33,6 +42,8 @@
             }
             echo "Resultado: $resultado <br>";
             */
+
+            
             ?>
         </h1>
     </div>
