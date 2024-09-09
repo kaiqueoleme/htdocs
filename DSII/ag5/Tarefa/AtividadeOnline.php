@@ -11,7 +11,7 @@
 <body>
 
     <!--Div para animação da tabela, adicionar responsividade, centralizar e ocupar 1/3 da tela-->
-    <div class="w3-third w3-animate-top w3-responsive w3-center ">
+    <div class="w3-third w3-animate-top w3-responsive w3-center w3-margin w3-round w3-hoverable">
 
         <?php
         // Declarando os Arrays bidimensionais para os dados da turma
