@@ -32,8 +32,8 @@
         <!--Criando a Tabela-->
         <table class="w3-table-all">
 
-            <!--Número hexadecimal 8&#176; para representar o símbolo em caso de incompatibilidade-->
-            <caption class="w3-blue w3-xxxlarge"> ano A</caption>
+            <!--Número hexadecimal &#176; para representar o símbolo em caso de incompatibilidade do navegador-->
+            <caption class="w3-blue w3-xxxlarge">8&#176; ano A</caption>
 
             <!--Cabeçalho da tabela-->
             <tr class="w3-blue">
@@ -43,10 +43,10 @@
             </tr>
 
             <!--Dados da Tabela-->
-            <?php foreach ($turma as $alunos) { //Primeira Iteração transforma o array bidimensional ($turma) em um array unidimensional ($alunos)
+            <?php foreach ($turma as $alunos) { //Transforma o array bidimensional ($turma) em um array unidimensional ($alunos)
             ?>
                 <tr>
-                    <?php foreach ($alunos as $aluno) { //Segunda Iteração transforma o array unidimensional($alunos) em uma variável ($aluno)
+                    <?php foreach ($alunos as $aluno) { //Transforma o array unidimensional($alunos) em uma variável ($aluno)
                     ?>
                         <!--Os dados serão acrescentados para formar a tabela-->
                         <td class="w3-center"><?php echo $aluno ?></td>
