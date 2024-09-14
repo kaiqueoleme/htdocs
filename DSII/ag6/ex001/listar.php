@@ -28,7 +28,7 @@
         die("Connection failed: " . $conexao->connect_error);
     }
     ?>
-    <div class="w3-paddingw3-content w3-half w3-display-topmiddle w3-margin">
+    <div class="w3-padding w3-content w3-half w3-display-topmiddle w3-margin">
         <h1 class="w3-center w3-teal w3-round-large w3-margin">Listagem de Amigos</h1>
         <table class="w3-table-all w3-centered">
             <thead>
@@ -58,8 +58,8 @@
                             echo '</tr>';
                         }
                     echo '
-                            <table>
-                        <div>';
+                            </table>
+                        </div>';
                     $conexao->close();
                     ?>
     </div>
