@@ -43,9 +43,9 @@
                     foreach ($resultado as $linha) {
                 ?>
                 <tr class="w3-center w3-text-black">
-                    <td><?php echo $linha['id'] ?></td>
-                    <td><?php echo $linha['nome'] ?></td>
-                    <td><?php echo $linha['fabricante'] ?></td>
+                    <td><?php echo $linha['id']; ?></td>
+                    <td><?php echo $linha['nome']; ?></td>
+                    <td><?php echo $linha['fabricante']; ?></td>
                 </tr>
                 <?php
                     }
