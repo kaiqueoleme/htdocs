@@ -19,47 +19,50 @@
 
         $conexao = new PDO($dsn, $user, $password);
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo ("Falha ao conectar: " . $e->getMessage());
+    }
 
 
     ?>
-        <div class="w3-margin w3-padding w3-content w3-half w3-display-topmiddle">
-            <h1 class="w3-center w3-margin w3-yellow w3-round-large">Lista de Estados</h1>
-            <table class="w3-table-all w3-centered">
-                <thead>
-                    <tr class="w3-center w3-green w3-text-white">
-                        <th>Código</th>
-                        <th>Nome</th>
-                        <th>Sigla</th>
-                    </tr>
-                </thead>
+    <div class="w3-margin w3-padding w3-content w3-half w3-display-topmiddle">
+        <h1 class="w3-center w3-margin w3-yellow w3-round-large">Lista de Estados</h1>
+        <table class="w3-table-all w3-centered">
+            <thead>
+                <tr class="w3-center w3-green w3-text-white">
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Sigla</th>
+                </tr>
+            </thead>
 
-                <tbody>
+            <tbody>
 
-                    <?php
+                <?php
+
+                try {
                     $sql = 'SELECT * FROM estado';
                     $resultado  = $conexao->query($sql);
-                    if ($resultado != null) 
+                    if ($resultado != null)
                         foreach ($resultado as $lista) {
-                    ?>
-                        <tr class="">
-                            <td><?php $lista['idestado']; ?></td>
-                            <td><?php $lista['nome']; ?></td>
-                            <td><?php $lista['sigla']; ?></td>
-                        </tr>
-                    <?php
+                ?>
+                <tr class="w3-text-black">
+                    <td><?php echo $lista['idestado']; ?></td>
+                    <td><?php echo $lista['nome']; ?></td>
+                    <td><?php echo $lista['sigla']; ?></td>
+                </tr>
+                <?php
                         };
+                } catch (PDOException $e) {
 
                     ?>
-                </tbody>
-            </table>
-
-        <?php
-    } catch (PDOException $e) {
-
-        echo ('Erro :' . $e->getMessage());
-    }
-        ?>
-        </div>
+                <h1 class="w3-button w3-indigo">ERRO! </h1>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 
