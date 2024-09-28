@@ -18,7 +18,7 @@
         $nome = $_POST['txtNome'];
         $senha = $_POST['txtSenha'];
 
-        require_once 'lista/conexaoBD.php';
+        require_once 'conexaoBD.php';
 
         $sql = "SELECT * FROM usuario WHERE nome = '" . $nome . "';";
 
@@ -28,7 +28,7 @@
         if ($linha != null) {
             if ($linha['senha'] == $senha) {
         ?>
-                <a href="lista/main.php">
+                <a href="main.php">
                     <h1 class="w3-button w3-teal"><?php echo $nome ?>, Seja Bem-Vinda! </h1>
                 </a>
             <?php
