@@ -32,7 +32,8 @@
                     <h1 class="w3-button w3-teal"><?php echo $nome ?>, Seja Bem-Vinda! </h1>
                 </a>
             <?php
-                $_SESSION['logado'] = $nome;
+            $_SESSION['logado'] = $nome;
+                
             } else {
             ?>
                 <a href="index.php">
