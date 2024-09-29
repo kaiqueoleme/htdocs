@@ -21,7 +21,7 @@
                 <label style="font-weight: bold;">Usuário</label>
                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Digite o nome" name="txtNome" required>
                 <label style="font-weight: bold;">Senha</label>
-                <input class="w3-input w3-border" type="password" placeholder="Digite a Senha" name="txtSenha" required>
+                <input class="w3-input w3-border" type="text" placeholder="Digite a Senha" name="txtSenha" required>
                 <button class="w3-button w3-block w3-teal w3-section w3-padding" type="submit">Entrar</button>
             </div>
         </form>

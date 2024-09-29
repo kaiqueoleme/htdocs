@@ -1,4 +1,4 @@
-<?php require_once('verificarAcesso.php'); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
