@@ -3,8 +3,9 @@ if (!isset($_SESSION)) {
     session_start();
 } 
 
-if((!isset ($_SESSION['logado']) == true))
+if(!(($_SESSION['logado']) == 'gabi'))
 {
     header('location:acessoNegado.php');
     die();
 }
+?>
