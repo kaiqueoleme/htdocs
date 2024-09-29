@@ -18,7 +18,6 @@
             <br>
             <h2 class="w3-button w3-teal">É necessária a Realização do Login Inválido! </h2>
         </a>
-        ';
 
     </div>
 
