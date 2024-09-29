@@ -29,7 +29,7 @@
             if ($linha['senha'] == $senha) {
         ?>
                 <a href="main.php">
-                    <h1 class="w3-button w3-teal"><?php echo $nome ?>, Seja Bem-Vinda! </h1>
+                    <h1 class="w3-button w3-teal w3-display-middle">Seja Bem-Vinda! </h1>
                 </a>
             <?php
             $_SESSION['logado'] = $nome;
