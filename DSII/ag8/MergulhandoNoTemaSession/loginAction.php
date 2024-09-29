@@ -15,7 +15,7 @@
             {
                 echo '
                 <a href="principal.php">
-                    <h1 class="w3-button w3-teal">'.$nome.', Seja Bem-Vinda!  </h1>
+                    <h1 class="w3-button w3-teal">Seja Bem-Vinda!  </h1>
                 </a> 
                 ';
                 $_SESSION['logado'] = $nome;
