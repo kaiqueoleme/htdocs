@@ -13,16 +13,21 @@
 <body>
     <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle" id="eProfissional">
         <?php
+        //Conexão com banco de dados
         $servername = "localhost";
         $username = "root";
-        $password = "@Kaiqueleme17";
+        $password = "usbw";
         $dbname = "pwii";
         $conexao = new mysqli($servername, $username, $password, $dbname);
+
         if ($conexao->connect_error) {
             die("Connection failed: " . $conexao->connect_error);
         }
+
+        //Executa uma Query para deletar os dados da tabela
         $sql = "DELETE FROM amigo WHERE id = '" . $_POST['txtID'] . "';";
 
+        //Condição para verificar se os dados foram passados
         if ($conexao->query($sql) === TRUE) {
         ?>
             <a href="listar.php">

@@ -25,9 +25,11 @@
             die("Connection failed: " . $conexao->connect_error);
         }
 
+        //Executa uma Query para inserir os dados da tabela
         $sql = "INSERT INTO amigo (nome, apelido, email)
         VALUES ('" . $_POST['txtNome'] . "', '" . $_POST['txtApelido'] . "', '" . $_POST['txtEmail'] . "')";
 
+        //Condição para verificar se os dados foram passados
         if ($conexao->query($sql) === TRUE) {
             echo '
         <a href="index.php">
@@ -40,10 +42,10 @@
         </a>
         ';
         }
+        //Fecha a conexão com o banco de dados
         $conexao->close();
 
         ?>
-
     </div>
 
 </body>

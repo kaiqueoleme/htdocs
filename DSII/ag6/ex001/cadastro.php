@@ -22,7 +22,7 @@
         <!--Início do formulário-->
         <form action="cadastroAction.php" class="w3-container" method='post'>
 
-             <!--Rótulo da opção-->
+            <!--Rótulo da opção-->
             <label class="w3-text-teal" style="font-weight: bold;">Código</label>
 
             <!--Input para escrever. Nesse caso o ID está desativo e não é possível escrever nada-->

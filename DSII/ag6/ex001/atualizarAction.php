@@ -21,8 +21,11 @@
         if ($conexao->connect_error) {
             die("Connection failed: " . $conexao->connect_error);
         }
+
+        //Executa uma Query para atualizar os dados da tabela, pegando os dados com o método $_POST
         $sql = "UPDATE amigo SET nome = '" . $_POST['txtNome'] . "', apelido = '" . $_POST['txtApelido'] . "', email='" . $_POST['txtEmail'] . "' WHERE id =" . $_POST['txtID'] . ";";
 
+        //Condição para verificar se os dados foram passados
         if ($conexao->query($sql) === TRUE) {
         ?>
             <a href="listar.php">
@@ -31,6 +34,7 @@
         <?php
             $id = mysqli_insert_id($conexao);
         } else {
+            //Aviso de ERRO caso os dados não forem passados
         ?>
             <a href="listar.php">
                 <h1 class="w3-button w3-teal">ERRO! </h1>

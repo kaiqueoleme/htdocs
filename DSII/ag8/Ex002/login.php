@@ -26,6 +26,8 @@
             $linha = $resultado->fetch(PDO::FETCH_BOTH);
 
             if ($linha != null) {
+
+                //Verificação se a senha é a mesma salva no banco de dados.
                 if ($linha['senha'] == $senha) {
             ?>
 

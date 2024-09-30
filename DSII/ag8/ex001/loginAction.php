@@ -14,6 +14,8 @@
     <div class="w3-padding w3-content w3-text-grey w3-third w3-display-middle">
 
         <?php
+
+        //Inicia-se a session
         session_start();
         $nome = $_POST['txtNome'];
         $senha = $_POST['txtSenha'];
@@ -23,19 +25,27 @@
         $sql = "SELECT * FROM usuario WHERE nome = '" . $nome . "';";
 
         $result = $conexao->query($sql);
+
+
+        /* Vai salvar os dados como array no $linha, onde os campos nome
+         e senha se tornam chaves ex:$linha['nome'] = 'gabi'  */
         $linha = mysqli_fetch_array($result);
 
-        
-
         if ($linha != null) {
+
+            //Verificação se a senha é a mesma que a do banco de dados
             if ($linha['senha'] == $senha) {
         ?>
                 <a href="main.php">
                     <h1 class="w3-button w3-teal w3-display-middle">Seja Bem-Vinda! </h1>
                 </a>
             <?php
-            $_SESSION['logado'] = $nome;
                 
+                //Atribuição do valor do nome de usuário
+                $_SESSION['logado'] = $nome;
+
+
+            //Caso não seja, volta para a página de login
             } else {
             ?>
                 <a href="index.php">
