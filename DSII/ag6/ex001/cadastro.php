@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Cadastro - MYSQLI</title>
 </head>
-
 <body>
+    <!--Link para voltar para a página anterior-->
     <a href="index.php" class="w3-display-topleft">
         <i class="fa fa-arrow-circle-left w3-large w3-teal w3-button w3-xxlarge"></i>
     </a>
 
     <div class="w3-padding w3-content w3-text-grey w3-third w3-margin w3-display-middle">
 
+        <!--Título do formulário-->
         <h1 class="w3-center w3-teal w3-round-large w3-margin">Cadastro de Amigos</h1>
+
+        <!--Início do formulário-->
         <form action="cadastroAction.php" class="w3-container" method='post'>
+
+             <!--Rótulo da opção-->
             <label class="w3-text-teal" style="font-weight: bold;">Código</label>
+
+            <!--Input para escrever. Nesse caso o ID está desativo e não é possível escrever nada-->
             <input name="txtID" class="w3-input w3-grey w3-border" disabled><br>
+            
             <label class="w3-text-teal" style="font-weight: bold;">Nome</label>
             <input name="txtNome" class="w3-input w3-light-grey w3-border"><br>
             <label class="w3-text-teal" style="font-weight: bold;">Apelido</label>
@@ -33,5 +40,4 @@
         </form>
     </div>
 </body>
-
 </html>
