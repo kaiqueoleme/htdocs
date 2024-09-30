@@ -25,6 +25,8 @@
         $result = $conexao->query($sql);
         $linha = mysqli_fetch_array($result);
 
+        
+
         if ($linha != null) {
             if ($linha['senha'] == $senha) {
         ?>
