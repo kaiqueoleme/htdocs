@@ -20,7 +20,7 @@
             $tipoVoto = "voto opcional";
         } else {
             $tipoVoto = "voto obrigatório";
-        }
+        }                       
 
         echo "Para essa idade, $tipoVoto";
         ?>
