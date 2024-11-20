@@ -14,7 +14,7 @@
                 echo "$c ";
                 $c+=2;
             } while ($c <=20);
-            
+            echo "<br>";
         ?>
     </div>
 </body>
