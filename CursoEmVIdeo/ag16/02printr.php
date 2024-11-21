@@ -8,8 +8,18 @@
 </head>
 <body>
     <div>
-        <?php 
+        <?php
+            $v[0] = 4;
+            $v[1] = 8;
+            $v[2] = 3;
 
+            //print_r($v);
+            $v2 = array (3,7,6,2,1,9);
+            var_export($v2);
+            echo "<br>";
+            var_dump($v2);
+            echo "<br>";
+            print_r($v2);
         ?>
     </div>
 </body>

@@ -8,8 +8,11 @@
 </head>
 <body>
     <div>
-        <?php 
-
+        <?php
+            $p = "leite";
+            $pr = 4.5;
+            //echo "O $p custa R$". number_format($pr,2);
+            printf("O %s custa R$ %.2f", $p, $pr);           
         ?>
     </div>
 </body>
