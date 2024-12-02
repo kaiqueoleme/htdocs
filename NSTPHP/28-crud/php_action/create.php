@@ -5,14 +5,17 @@ session_start();
 require_once 'db_connect.php';
 try {
     if (isset($_POST['btn_cadastrar'])) {
+        $stmt = $connect->prepare("INSERT INTO clientes (nome, sobrenome, email, idade) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $nome, $sobrenome, $email, $idade);
+
         $nome = mysqli_escape_string($connect, $_POST['nome']);
         $sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
         $email = mysqli_escape_string($connect, $_POST['email']);
         $idade = mysqli_escape_string($connect, $_POST['idade']);
 
-        $sql = "INSERT INTO clientes (nome, sobrenome, email, idade) VALUES ('$nome', '$sobrenome', '$email', '$idade')";
-
-        if (mysqli_query($connect, $sql)) {
+        if ($stmt->execute()) {
+            $stmt->close();
+            $connect->close();
             $_SESSION['mensagem'] = "Cadastrado com sucesso!";
             header('Location: ../index.php');
         }
